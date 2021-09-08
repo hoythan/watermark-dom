@@ -40,6 +40,7 @@
     watermark_parent_width:0,      //水印的总体宽度（默认值：body的scrollWidth和clientWidth的较大值）
     watermark_parent_height:0,     //水印的总体高度（默认值：body的scrollHeight和clientHeight的较大值）
     watermark_parent_node:null,     //水印插件挂载的父元素element,不输入则默认挂在body上
+    watermark_nowrap: false,
     monitor:true,                   //monitor 是否监控， true: 不可删除水印; false: 可删水印。
   };
 
@@ -200,6 +201,11 @@
         mask_div.style.height = defaultSettings.watermark_height + 'px';
         mask_div.style.display = "block";
         mask_div.style['-ms-user-select'] = "none";
+        // 强制不换行
+        if (defaultSettings.watermark_nowrap) {
+          mask_div.style.overflow = 'initial';
+          mask_div.style['white-space'] = 'nowrap';
+        }
         /*设置水印相关属性end*/
         shadowRoot.appendChild(mask_div);
       }
