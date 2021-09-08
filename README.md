@@ -1,3 +1,14 @@
+> 介于 [watermark-dom](https://github.com/saucxs/watermark-dom) 项目已基本停止维护,故新开一个版本,对可能遇到的问题做兼容和修复
+
+添加新配置项
+
+```js
+  watermark_nowrap: false   // 强制换行,默认 false
+```
+
+----
+
+
 # [watermark-dom](https://github.com/saucxs/watermark-dom)
 [![](https://img.shields.io/badge/Powered%20by-saucxs%20-brightgreen.svg)](https://github.com/saucxs/watermark-dom)
 [![GitHub license][license-image]][license-url]
